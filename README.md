@@ -13,13 +13,13 @@ In this analysis, we are vetting the second method. A quick walkthrough of the p
     (tree sizes - 50, 100, 500, 1000 & random states - 20 randomly generated seeds)
 2) an outlier's feature importances was generated based on the frequency of the feature's sighting along the short paths where the observation lies. The higher the frequency, the more important the feature is deemed.
 
-# Highlights/Conclusions
+## Highlights/Conclusions
 1) sklearn's export_text function generates a text layout of each tree. The recurse_tree function in this repository helps to also extract all the paths.
 2) the 'results matrix' image confirms that the forest reaches optimal fit for outliers at around 100 trees, but requires close to 500 trees for feature importances. In other words, larger forests lead to a significant reduction in noise while generating feature importances.
 3) on a standard machine, AEN's spyder was able to generate 20 forests of a 1000 trees each in 1 minute
 
 
-# Further research
+## Further research
 1) feature importances was a simple tabulation of count(feature) along the outlier's short paths. Weights could also be applied to features based on path length. This might help reduce noise earlier leading to smaller forests.
 2) feature importances was analyzed for only the model's top outlier. We can go further down the rankings to confirm that the concentration persists.
 3) the models' precision was ~80%. Feature engineering could help improve that metric and/or feature importances.
