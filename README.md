@@ -1,4 +1,4 @@
-# Isolation_Forests - Feature importances
+# Isolation Forests - feature importances
 
 Isolation Forest is a tree based solution for Anomaly Detection. Most models used in outlier detection (eg: clustering) train for similarities and allow the observations with high training errors to be deemed outliers. Isolation Forest however trains specifically to detect outliers as being observations that lie at the short paths of its trees. This model is lite (~100 independently trained trees), but prone to false positives. 
 
