@@ -9,8 +9,8 @@ False Positives & proposed solution: https://arxiv.org/pdf/1811.02141.pdf
 For explainability of results, an outlier's feature importance can be gleaned from a random forest generated off the same dataset with only the outlier set as the target variable. We believe that one can also leverage the Isolation Forest itself by identifying the subset of short paths that contain the outlier and computing feature frequencies.
 
 In this analysis, we are vetting the second method. A quick walkthrough of the process:
-1) we ran the Isolation Forest for a combination of tree sizes and random states to identify where the top outlier's feature importances stabilizes.
-    (tree sizes - 50, 100, 500, 1000 & random states - 20 randomly generated seeds)
+1) we ran the Isolation Forest for a combination of forest sizes and random states to identify where the top outlier's feature importances stabilizes.
+    (forest sizes - 50, 100, 500, 1000 & random states - 20 randomly generated seeds)
 2) an outlier's feature importances was generated based on the frequency of the feature's sighting along the short paths where the observation lies. The higher the frequency, the more important the feature is deemed.
 
 ## Highlights/Conclusions
